@@ -4,4 +4,4 @@ Contributors:
   Sebastian    - Handle component requests
 
 in controller:
-after_filter OutputCompressionFilter
+  after_filter OutputCompressionFilter
