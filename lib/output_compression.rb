@@ -56,9 +56,9 @@ class OutputCompressionFilter
 end
 
 # Handle component requests by not compressing the output from a component
-module ActionController
+module Rack
   # These methods are available in both the production and test Request objects.
-  class AbstractRequest
+  class ActionController::Request
     def is_component_request=(val)  #:nodoc:
       @is_component_request = val
     end
@@ -71,7 +71,7 @@ module ActionController
 end
 
 # Mark the request as being a Component request
-module ActionController
+module Rack
   module Components
     protected
       def request_for_component(options)
